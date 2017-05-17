@@ -1,0 +1,27 @@
+# Spring MVC dispatcher servlet path. Needs to be different than Jersey's to enable/disable Actuator endpoints access (/info, /health, ...)
+server.servlet-path: /
+
+management.security.enabled: false
+
+# http://cxf.apache.org/docs/springboot.html#SpringBoot-SpringBootCXFJAX-RSStarter
+cxf:
+  path: /api # CXFServlet URL pattern
+  jaxrs:
+    component-scan: true
+
+# http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints
+endpoints:
+  enabled: false
+  info:
+    enabled: true
+  health:
+    enabled: true
+  metrics:
+    enabled: true
+
+# app name and build version updated during build process from Maven properties.
+info:
+  app:
+    name: @project.artifactId@
+  build:
+    version: @project.version@

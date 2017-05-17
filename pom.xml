@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.asimio.api</groupId>
+	<artifactId>springboot-cxf-swagger-docker</artifactId>
+	<version>0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>SpringBoot + CXF + Swagger + Docker Example</name>
+	<description>SpringBoot + CXF + Swagger + Docker Example</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.3.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<scm>
+		<connection>${repo.bitbucket.url}</connection>
+		<developerConnection>${repo.bitbucket.url}</developerConnection>
+		<url>${project.bitbucket.url}</url>
+	</scm>
+
+	<organization>
+		<name>Asimio Tech LLC</name>
+		<url>http://tech.asimio.net/</url>
+	</organization>
+	<inceptionYear>2016</inceptionYear>
+	<issueManagement>
+		<system>Bitbucket.org</system>
+		<url>${project.bitbucket.url}/springboot-cxf-swagger-docker-example/issues</url>
+	</issueManagement>
+
+	<developers>
+		<developer>
+			<id>ootero</id>
+			<name>Orlando L Otero</name>
+			<organization>Asimio Tech LLC</organization>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<start-class>com.asimio.cxfdemo.main.DemoCxfApplication</start-class>
+
+		<project.bitbucket.url>https://bitbucket.org/asimio</project.bitbucket.url>
+		<repo.bitbucket.url>${project.bitbucket.url}/springboot-cxf-swagger-docker-example.git</repo.bitbucket.url>
+
+		<!-- Dependencies -->
+		<cxf.version>3.1.11</cxf.version>
+		<swagger-ui.version>2.2.10-1</swagger-ui.version>
+
+		<!-- Test dependencies -->
+		<rest-assured.version>2.9.0</rest-assured.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-service-description</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.webjars</groupId>
+		    <artifactId>swagger-ui</artifactId>
+		    <version>${swagger-ui.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
+		</dependency>
+
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${rest-assured.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
