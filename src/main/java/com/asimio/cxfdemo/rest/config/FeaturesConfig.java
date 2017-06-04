@@ -17,8 +17,8 @@ public class FeaturesConfig {
 	@Bean("swagger2Feature")
 	public Feature swagger2Feature() {
 		Swagger2Feature result = new Swagger2Feature();
-		result.setTitle("Spring Boot + CXF + Swagger + Docker Example");
-		result.setDescription("Spring Boot + CXF + Swagger + Docker Example description");
+		result.setTitle("Spring Boot + CXF + Swagger Example");
+		result.setDescription("Spring Boot + CXF + Swagger Example description");
 		result.setBasePath(this.basePath);
 		result.setVersion("v1");
 		result.setContact("Orlando L Otero");
