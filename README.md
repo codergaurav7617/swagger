@@ -17,8 +17,11 @@ mvn spring-boot:run
 ```
 
 Application available at http://localhost:8080
+
 API available at FIXME
+
 WADL available at FIXME
+
 Swagger docs available at FIXME
 
 ### Who do I talk to? ###
