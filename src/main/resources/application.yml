@@ -1,4 +1,4 @@
-# Spring MVC dispatcher servlet path. Needs to be different than Jersey's to enable/disable Actuator endpoints access (/info, /health, ...)
+# Spring MVC dispatcher servlet path. Needs to be different than CXF's to enable/disable Actuator endpoints access (/info, /health, ...)
 server.servlet-path: /
 
 management.security.enabled: false
