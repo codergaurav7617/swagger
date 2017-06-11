@@ -19,9 +19,10 @@ mvn spring-boot:run
 ### URLs ###
 
 - App available at http://localhost:8080
-- API available at FIXME
-- WADL available at FIXME
-- Swagger docs available at FIXME
+- API available at http://localhost:8080/api
+- WADL available at http://localhost:8080/api/?_wadl
+- Swagger JSON doc available at http://localhost:8080/api/swagger.json
+- Swagger UI available at http://localhost:8080/api/api-docs?url=/api/swagger.json
 
 ### Who do I talk to? ###
 
