@@ -1,13 +1,11 @@
 package com.asimio.cxfdemo.rest.config;
 
 import org.apache.cxf.feature.Feature;
-import org.apache.cxf.feature.Features;
 import org.apache.cxf.jaxrs.swagger.Swagger2Feature;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Features
 @Configuration
 public class FeaturesConfig {
 
