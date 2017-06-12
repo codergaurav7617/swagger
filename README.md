@@ -1,6 +1,6 @@
 # README #
 
-Accompanying source code for blog entry at FIXME
+Accompanying source code for blog entry at http://tech.asimio.net/2017/06/12/Implementing-APIs-using-Spring-Boot-CXF-and-Swagger.html
 
 ### Requirements ###
 
