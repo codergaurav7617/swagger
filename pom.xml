@@ -51,7 +51,7 @@
 		<repo.bitbucket.url>${project.bitbucket.url}/springboot-cxf-swagger-example.git</repo.bitbucket.url>
 
 		<!-- Dependencies -->
-		<cxf.version>3.1.11</cxf.version>
+		<cxf.version>3.5.9</cxf.version>
 		<swagger-ui.version>2.2.10-1</swagger-ui.version>
 
 		<!-- Test dependencies -->
