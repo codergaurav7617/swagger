@@ -52,7 +52,7 @@
 
 		<!-- Dependencies -->
 		<cxf.version>3.1.11</cxf.version>
-		<swagger-ui.version>2.2.10-1</swagger-ui.version>
+		<swagger-ui.version>3.23.11</swagger-ui.version>
 
 		<!-- Test dependencies -->
 		<rest-assured.version>2.9.0</rest-assured.version>
